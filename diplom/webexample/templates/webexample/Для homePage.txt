@@ -1,0 +1,8 @@
+<!--
+    Логика шаблонизатора, так подключаются файлы из папки sttic
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'webexample/css/*название файла*' %}">
+    И тут другие файлы
+    Для картинки примерно так работает
+    <img src="{% static 'webexample/images/*название файла* %}'"
+    -->

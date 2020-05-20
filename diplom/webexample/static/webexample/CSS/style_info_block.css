@@ -1,0 +1,44 @@
+.info-block {
+	background-color: #EFECE4 ;
+	padding: 1% 0;
+	
+}
+
+.info-content {
+	padding:0;
+}
+
+.card {
+	background-color: #DDDAD4 ;
+	height: 610px;
+	border:none;
+}
+
+h4 {
+	margin-top: 5%;
+}
+
+.col-lg-4 {
+	padding:0 1%;
+	width: 32%;
+	display: inline-block;
+	
+}
+
+.block-footer{
+
+	background-color: #001F2E ;
+}
+
+.p-footer{
+	color: #969292 !important;
+	margin:0;
+	padding: 4px 3%;
+}
+
+@media (max-device-width: 768px){
+	.col-xs-12 {
+		margin:3% 1%;
+		width: 96%;
+	}
+}

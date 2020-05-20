@@ -1,0 +1,31 @@
+.navbar {
+	background-color: #001F2E;
+	display:block;
+	float:right;
+	width:100%;
+	padding:0;
+	border: none;
+
+}
+
+
+.nav-item a {
+	font-size: 150%;
+}
+
+
+
+.back {
+	background-color: transparent;
+	border: none;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-image:url("../images/Shapka.png");
+	height:250px;
+
+	
+}
+
+.navbar-toggler{
+	margin: 1% 1%;
+}

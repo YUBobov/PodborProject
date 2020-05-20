@@ -1,0 +1,61 @@
+{% block content %}
+ <!--Блок для карты-->
+ <div class="container-fluid main-block">
+  <div class="row">
+      <div id="map" class="col-lg-7 col-xs-12 map" ></div>
+                     
+             <!--Блок для полей-->
+      <div class = "col-lg-5 sidebar">
+         <h1>Параметры поиска</h1>
+         <!--В методе actions прописана ссылка для перехода страницы по атрибуту name с помощью логики Django-->
+         <form method = "POST" action="{% url 'kabels' %}" id = "search_form" >
+          <!--Токен безопасности, благодаря которому Django определяет, что данные были внесены с этого сайта-->
+          {% csrf_token %}
+         	<form>
+         		<div class="form-group">
+              <label class="text-black-50" for="formControlSelect1">Подкатегории типов кабеля:</label> 
+              <select class="form-control form-control-lg form-control-xs shadow" id = "formControlSelect1" name="types">
+                  <!--тут потом нужно будет в value названия таблиц прописать-->
+                  <option value="None">Не выбрано</option> 
+                  <option value="FTTx">FTTx</option> 
+                  <option value="ADSS">Подвесной самонесущий, ADSS</option>
+                  <option value="Tip8">Подвесной, тип-8</option>
+                  <option value="Vkanal">В канализацию</option>
+                  <option value="Vgrunt">В грунт</option>
+                  <option value="Raspred">Распредилительный</option>
+                  <option value="Ognest">Огнестойкий</option>
+                  <option value="Univers">Универсальный</option>
+              </select> 
+              </div>
+      		  <div class="form-group">
+              <label class="text-black-50" for="formControlSelect2">Количество волокон:</label> 
+                <select class="form-control form-control-lg form-control-xs shadow" id = "formControlSelect2" name="vol">
+                  <option value="0">Не выбрано</option>
+                  <!--Добавление в форму значений волокон из таблицы-->
+                  {% for vol in allVol %}
+                  <option value="{{ vol }}">{{ vol }}</option> 
+                  {% endfor %}
+              </select>
+              </div>
+              <div class="form-group">
+            <label class="text-black-50" for="formControlSelect3">Количество кН:</label> 
+              <select class="form-control form-control-lg form-control-xs shadow" id = "formControlSelect3" name="kn">
+                <!--Добавление в форму значений кН из таблицы-->
+                {% for kn in allKn %}
+                {% if kn == 0 %}
+                <option value="0">Не выбрано</option>
+                {% else %}
+                <option value="{{ kn }}">{{ kn }}</option>
+                {% endif %}
+                {% endfor %}
+              </select></div>
+              <!--После нажатия проиходит переадресация на страницу с выводом кабелей-->
+              <button type="submit" id = "btn" class = "btn btn-secondary btn-lg btn-block shadow" />Вывести</button>
+              
+            </div>
+
+          </form>
+      </div>    
+    </div>
+</div>
+{% endblock %}

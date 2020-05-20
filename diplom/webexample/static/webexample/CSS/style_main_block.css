@@ -1,0 +1,38 @@
+.map {
+		height: 600px;
+ 	
+}
+.main-block{
+	padding: 1% 5%;
+}
+
+.map_box {
+	background-color: #EFECE4 ;
+}
+
+
+label {
+	font-size: 150%;
+}
+
+h1 {
+	padding-bottom: 2%;
+	text-align: center;
+	letter-spacing: 3px;
+	color: #023B51 !important;
+}
+
+button {
+	margin: 4% 0;
+	background: #001F2E !important;
+	color: #EFECE4 !important;
+	text-transform: uppercase;
+	
+}
+
+@media (max-device-width: 768px){
+	.main-block {
+		padding: 1% 0;
+	}
+}
+

@@ -1,0 +1,31 @@
+{% load static %}
+{% block content %}
+<!-- Блок для вывода часто задаваемых вопросов-->
+<div class="container-fluid question-cont" id = "question">
+<div class="container ">
+		<h1 >Часто задаваемые вопросы</h1>
+		<div class="media ">
+			<img class="shadow rounded d-flex mr-3 " src="{% static '/webexample/images/jessika.jpg' %}" >
+			<div class="media-body">
+			    <h4 class="mt-0 ">Что делает ваш сервис?</h4>
+			    <p class="text-black-50 font-italic">Наш сервис помогает Инженерам связи ускорить работу по поиску нужного кабеля у поставщиков.</p>
+			</div>
+		</div>
+		<div class="media ">
+			<img class="shadow rounded d-flex mr-3 " src="{% static '/webexample/images/director.jpg' %}" >
+			<div class="media-body">
+			    <h4 class="mt-0 ">Сервис выполняет поиск по базе определенных поставщиков, с которыми заключен договор или же по всем существующим?</h4>
+			    <p class="text-black-50 font-italic">Сервис выполняет поиск по всем имеющиймся поставщикам кабеля на территории РФ.</p>
+			</div>
+		</div>
+		<div class="media ">
+			<img class="shadow rounded d-flex mr-3 " src="{% static '/webexample/images/lucius.jpg' %}" >
+			<div class="media-body">
+			    <h4 class="mt-0 ">Нужно ли знать заранее длину требующегося кабеля?</h4>
+			    <p class="text-black-50 font-italic">Нет, рассчет может быть выполнен на карте путем ввода пользователем начальной и конечной точки места прокладки кабеля.</p>
+			</div>
+		</div>
+	
+</div>
+</div>
+{% endblock %}

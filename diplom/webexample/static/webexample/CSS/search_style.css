@@ -1,0 +1,35 @@
+p {
+	font-size: 150% ;
+	color: #023B51 !important;
+}
+
+h3>a {
+	color: #023B51 !important;
+}
+
+h3>a.hover {
+	color: white;
+
+}
+
+.result-block {
+	
+}
+
+.list-group-item {
+	
+	background-color: #E2DFD9 !important;
+	
+	border:none;
+	margin: 1% 5%;
+
+}
+
+.search-block {
+	background-color: #EFECE4 !important;
+
+}
+
+.price {
+	color: #87B749 !important;
+}

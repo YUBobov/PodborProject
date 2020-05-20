@@ -1,0 +1,53 @@
+{% extends "webexample/homePage.html" %}
+<!--Информация о кабелях, которая будет вставлятся при нажатии кнопки "Вывести"-->
+
+<!--Если по заданным параметрам были найдены соответсвтия-->
+
+<!--Выводятся данные о таблице, которая была занесена в переменную bd в методе kabels файла views.py-->
+
+
+    <!--Цикл идёт по отдельной записи в таблице bd
+    С помощью логики Django происходит обращение к необходимому атрибуту каждой записи в цикле-->
+    
+<!--
+<div class="income">
+	<div class="income_list">
+		<h1><a href="{{ kab.link }}" >{{ kab.name }}</a></h1>
+	    
+	    <p> {{ kab.price }} </p>
+	</div>
+</div>
+-->
+<!--<h2 class="icome__title">Результаты поиска</h2>-->
+{% block content %}
+
+<div class="container-fluid search-block">
+    <div class="row ">      
+        <div class="col-lg-12">
+           <ul class="list-group result-block">
+                {% if bd %}
+                {% for kab in bd %}
+               <li class="list-group-item d-flex justify-content-between align-items-center shadow">
+                   <h3><a href="{{ kab.link }}" >{{ kab.name }}</a></h3>
+                   <!--Если цена не указана на сайте-->
+                   {% if kab.price != 0 %}
+                   <p class=price>{{ kab.price }} руб.</p>
+                   {% else %}
+                   <p class=price>уточняйте у производителя</p>
+                   {% endif %}
+               </li>  
+               {%  endfor %}
+           </ul>
+
+
+           
+        </div>
+</div>
+
+<!--Если соответсвий найдено не было-->
+{% else %}
+<div class="alert alert-warning" role="alert">
+    <strong>К сожалению,</strong> по вашим параметрам не обнаружено необходимых данных
+</div>
+{% endif %}
+{% endblock %}
